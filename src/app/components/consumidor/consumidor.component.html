@@ -1,34 +1,34 @@
-<h1 class="item-justified"> ejemplo programacion reactiva RxJS</h1>
+<h1 class="text-center"> ejemplo programacion reactiva RxJS</h1>
 <hr>
-<p>obtencion de datos desde obserbale</p>
+<p class="text-center">obtencion de datos desde obserbale</p>
 
-<div>
+<div class="container-fluid">
   <table mat-table [dataSource]="(tableDataSource$ | async)!" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
   
     <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> id. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
   
     <!-- Name Column -->
     <ng-container matColumnDef="color">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
   
     <!-- Weight Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <th mat-header-cell *matHeaderCellDef> color </th>
       <td mat-cell *matCellDef="let element"> {{element.color}} </td>
     </ng-container>
   
     <!-- Symbol Column -->
     <ng-container matColumnDef="type">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <th mat-header-cell *matHeaderCellDef> tipo </th>
       <td mat-cell *matCellDef="let element"> {{element.type}} </td>
     </ng-container>
   
