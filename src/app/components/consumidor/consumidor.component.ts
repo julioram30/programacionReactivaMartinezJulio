@@ -13,6 +13,8 @@ import { map, tap } from 'rxjs';
 export class ConsumidorComponent implements OnInit,OnDestroy {
 
   tableDataSource$: Observable<MatTableDataSource<Data>>;
+  
+  displayedColumns: string[] = ['position', 'name', 'color', 'type'];
 
   constructor(private serviceData:DataService) { 
     this.tableDataSource$ = serviceData.getData().pipe(tap((odata) => console.log(odata)),
@@ -20,6 +22,7 @@ export class ConsumidorComponent implements OnInit,OnDestroy {
   }
   
   ngOnInit() {
+    
   }
 
   ngOnDestroy(): void {
